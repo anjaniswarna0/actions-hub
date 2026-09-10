@@ -6,7 +6,13 @@ Starting point for a new Action repo. When a proposal in [`actions-hub`](../) is
 
 1. `action.yml` — fill in `name`, `description`, `inputs`, `outputs`, and the `runs` steps.
 2. This README — describe what the action does and show a `uses:` example.
-3. `.github/workflows/test.yml` — keep it green; it runs the action against itself on every push.
+3. A test workflow in the new repo's own `.github/workflows/` — see the note below.
+
+## Important: workflow file location
+
+GitHub Actions only reads workflows from `.github/workflows/` at the **root** of a repository — never from a subfolder. That's why this template's CI check lives at [`/.github/workflows/test-action-template.yml`](../.github/workflows/test-action-template.yml) in *this* repo (`actions-hub`), one level up from here, instead of inside `action-template/` itself.
+
+When you copy this folder into a brand-new repo, also copy that workflow file into the new repo's `.github/workflows/test.yml` (at the new repo's root) — otherwise your tests silently never run.
 
 ## Usage (fill in once published)
 
