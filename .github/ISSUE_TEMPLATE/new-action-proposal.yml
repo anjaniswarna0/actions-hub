@@ -1,0 +1,45 @@
+name: New Action Proposal
+description: Propose a brand-new Action repo
+title: "[Proposal]: "
+labels: ["proposal", "needs-triage"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for proposing a new action! Please fill this out as completely as you can — it's what maintainers use to triage your request.
+  - type: input
+    id: action-name
+    attributes:
+      label: Proposed action name
+      description: e.g. `deploy-lambda`, `notify-slack`
+      placeholder: my-new-action
+    validations:
+      required: true
+  - type: textarea
+    id: problem
+    attributes:
+      label: What problem does this solve?
+      description: What does the action do, and why does it need to exist?
+    validations:
+      required: true
+  - type: textarea
+    id: inputs-outputs
+    attributes:
+      label: Proposed inputs / outputs
+      description: Rough shape is fine at this stage.
+    validations:
+      required: false
+  - type: input
+    id: maintainer
+    attributes:
+      label: Who will maintain this?
+      description: Your GitHub username, and anyone else committing to review/maintain it.
+    validations:
+      required: true
+  - type: textarea
+    id: alternatives
+    attributes:
+      label: Alternatives considered
+      description: Existing actions, manual scripts, etc. Why don't they work?
+    validations:
+      required: false
