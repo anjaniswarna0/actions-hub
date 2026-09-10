@@ -1,0 +1,16 @@
+name: "Action Name"
+description: "One sentence describing what this action does."
+inputs:
+  example-input:
+    description: "Describe this input."
+    required: true
+    default: ""
+outputs:
+  example-output:
+    description: "Describe this output."
+runs:
+  using: "composite"
+  steps:
+    - name: Say hello
+      shell: bash
+      run: echo "Hello from the action template! Input was ${{ inputs.example-input }}"
